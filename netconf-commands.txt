@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <capabilities>
+  <capability>urn:ietf:params:netconf:base:1.1</capability>
+  <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring</capability>
+  <capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+  <capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+  <capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+ </capabilities>
+</hello>
+]]>]]>
+
+
+
+<?xml version='1.0' encoding='UTF-8'?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1001">
+  <get-config>
+    <source>
+      <running/>
+    </source>
+    <filter>
+      <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg"/>
+    </filter>
+  </get-config>
+</rpc>]]>]]>
+
+<rpc message-id="106" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+   <get-config>
+        <source>
+          <running/>
+        </source>
+        <filter>
+            <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+                    <interface-configuration>
+                            <active>act</active>
+                            <interface-name>GigabitEthernet0/3/0/1</interface-name>
+                        <shutdown/>
+                    </interface-configuration>
+                </interface-configurations>
+        </filter>
+    </get-config>
+ </rpc>
